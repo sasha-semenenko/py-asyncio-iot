@@ -37,7 +37,7 @@ class IOTService:
         await self.devices[device_id].disconnect()
         del self.devices[device_id]
 
-    def get_device(self, device_id: str) -> Device:
+    async def get_device(self, device_id: str) -> Device:
         return self.devices[device_id]
 
     async def run_program(self, program: List[Message]) -> None:
